@@ -16,10 +16,10 @@ function getRandomexcuser() {
 }
 
 function getRandomfunfact() {
-    fetch('https://api.aakhilv.me/fun/facts')
+    fetch('https://uselessfacts.jsph.pl/random.json?language=en')
         .then(res => res.json())
         .then(data => {
             funfact_result.innerHTML = `
-            <h2>${data[0]}</h2>`
+            <h2>${data.text}</h2>`
         })
 }
